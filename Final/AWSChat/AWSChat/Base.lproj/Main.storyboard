@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="71T-BH-mBD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="71T-BH-mBD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login-->
+        <!--Delegate-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController title="Login" id="BYZ-38-t0r" customClass="LoginViewController" customModule="AWSChat" customModuleProvider="target" sceneMemberID="viewController">
@@ -91,14 +91,27 @@
                                     <segue destination="aiI-xb-Kdo" kind="show" id="WLd-0b-taM"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJt-tZ-Xb3" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="10" y="307" width="355" height="47"/>
+                                <color key="backgroundColor" red="0.74431446339999996" green="0.74431446339999996" blue="0.74431446339999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="BV1-F0-bFM"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="sBP-ia-NbY"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="WJK-u8-sd2" firstAttribute="top" secondItem="xu1-B3-VOk" secondAttribute="bottom" constant="20" id="CP1-hR-tgq"/>
+                            <constraint firstAttribute="trailing" secondItem="rJt-tZ-Xb3" secondAttribute="trailing" constant="10" id="DNd-x0-DdS"/>
+                            <constraint firstItem="rJt-tZ-Xb3" firstAttribute="top" secondItem="cpj-ne-EcM" secondAttribute="bottom" constant="23" id="Fhc-ly-sFS"/>
                             <constraint firstAttribute="trailing" secondItem="xu1-B3-VOk" secondAttribute="trailing" constant="10" id="FuK-Af-OEU"/>
                             <constraint firstItem="xu1-B3-VOk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="KKY-xm-fV7"/>
                             <constraint firstItem="xu1-B3-VOk" firstAttribute="top" secondItem="4Xm-a0-sIe" secondAttribute="bottom" constant="10" id="KaM-OQ-NJT"/>
                             <constraint firstItem="uQE-Qv-gaz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="MNI-Ag-cZ8"/>
+                            <constraint firstItem="rJt-tZ-Xb3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="OyW-TD-PsJ"/>
                             <constraint firstItem="cpj-ne-EcM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="Qbf-TW-rVz"/>
                             <constraint firstItem="cpj-ne-EcM" firstAttribute="top" secondItem="xu1-B3-VOk" secondAttribute="bottom" constant="20" id="RB6-4K-0nU"/>
                             <constraint firstItem="4Xm-a0-sIe" firstAttribute="top" secondItem="uQE-Qv-gaz" secondAttribute="bottom" constant="20" id="Ua1-eO-EoI"/>
@@ -112,6 +125,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="kdZ-zC-VoT"/>
                     <connections>
+                        <outlet property="facebookButton" destination="rJt-tZ-Xb3" id="tk2-dn-Hso"/>
                         <outlet property="loginButton" destination="WJK-u8-sd2" id="qEl-Yx-P7F"/>
                         <outlet property="passwordField" destination="xu1-B3-VOk" id="PgS-ir-gdf"/>
                         <outlet property="signupButton" destination="cpj-ne-EcM" id="00j-Jf-nzr"/>

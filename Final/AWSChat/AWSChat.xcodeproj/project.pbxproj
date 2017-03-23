@@ -22,6 +22,11 @@
 		9122B0521E6F43130024AE10 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9122B04D1E6F43130024AE10 /* AWSCore.framework */; };
 		9122B0531E6F43130024AE10 /* AWSCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9122B04D1E6F43130024AE10 /* AWSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9122B0761E7842510024AE10 /* CognitoUserPoolController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9122B0751E7842510024AE10 /* CognitoUserPoolController.swift */; };
+		9135A4E61E81AE9500374DAE /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9135A4E31E81AE9500374DAE /* Bolts.framework */; };
+		9135A4E71E81AE9500374DAE /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9135A4E41E81AE9500374DAE /* FBSDKCoreKit.framework */; };
+		9135A4E81E81AE9500374DAE /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9135A4E51E81AE9500374DAE /* FBSDKLoginKit.framework */; };
+		91C5D4361E844B2200DAFD11 /* CognitoIdentityPoolController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5D4351E844B2200DAFD11 /* CognitoIdentityPoolController.swift */; };
+		91C5D4381E8465FD00DAFD11 /* SocialIdentityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5D4371E8465FD00DAFD11 /* SocialIdentityManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +60,12 @@
 		9122B04C1E6F43130024AE10 /* AWSCognitoIdentityProvider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognitoIdentityProvider.framework; path = Carthage/Build/iOS/AWSCognitoIdentityProvider.framework; sourceTree = "<group>"; };
 		9122B04D1E6F43130024AE10 /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCore.framework; path = Carthage/Build/iOS/AWSCore.framework; sourceTree = "<group>"; };
 		9122B0751E7842510024AE10 /* CognitoUserPoolController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CognitoUserPoolController.swift; sourceTree = "<group>"; };
+		9135A4E31E81AE9500374DAE /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "FacebookSDKs-iOS-4.20.2/Bolts.framework"; sourceTree = "<group>"; };
+		9135A4E41E81AE9500374DAE /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "FacebookSDKs-iOS-4.20.2/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		9135A4E51E81AE9500374DAE /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "FacebookSDKs-iOS-4.20.2/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		9140BCF31E825DF200AD650A /* ObjCBridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjCBridging-Header.h"; sourceTree = "<group>"; };
+		91C5D4351E844B2200DAFD11 /* CognitoIdentityPoolController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CognitoIdentityPoolController.swift; sourceTree = "<group>"; };
+		91C5D4371E8465FD00DAFD11 /* SocialIdentityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialIdentityManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +73,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9135A4E71E81AE9500374DAE /* FBSDKCoreKit.framework in Frameworks */,
 				9122B04E1E6F43130024AE10 /* AWSCognito.framework in Frameworks */,
+				9135A4E81E81AE9500374DAE /* FBSDKLoginKit.framework in Frameworks */,
 				9122B0501E6F43130024AE10 /* AWSCognitoIdentityProvider.framework in Frameworks */,
 				9122B0521E6F43130024AE10 /* AWSCore.framework in Frameworks */,
+				9135A4E61E81AE9500374DAE /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +88,9 @@
 		9122B0231E6E98070024AE10 = {
 			isa = PBXGroup;
 			children = (
+				9135A4E31E81AE9500374DAE /* Bolts.framework */,
+				9135A4E41E81AE9500374DAE /* FBSDKCoreKit.framework */,
+				9135A4E51E81AE9500374DAE /* FBSDKLoginKit.framework */,
 				9122B04B1E6F43130024AE10 /* AWSCognito.framework */,
 				9122B04C1E6F43130024AE10 /* AWSCognitoIdentityProvider.framework */,
 				9122B04D1E6F43130024AE10 /* AWSCore.framework */,
@@ -99,6 +116,7 @@
 				9122B02F1E6E98070024AE10 /* AppDelegate.swift */,
 				9122B0361E6E98070024AE10 /* Assets.xcassets */,
 				9122B03B1E6E98070024AE10 /* Info.plist */,
+				9140BCF31E825DF200AD650A /* ObjCBridging-Header.h */,
 			);
 			path = AWSChat;
 			sourceTree = "<group>";
@@ -127,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				9122B0751E7842510024AE10 /* CognitoUserPoolController.swift */,
+				91C5D4351E844B2200DAFD11 /* CognitoIdentityPoolController.swift */,
+				91C5D4371E8465FD00DAFD11 /* SocialIdentityManager.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -223,8 +243,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9122B0441E6E98470024AE10 /* SignupViewController.swift in Sources */,
+				91C5D4381E8465FD00DAFD11 /* SocialIdentityManager.swift in Sources */,
 				9122B0421E6E98300024AE10 /* LoginViewController.swift in Sources */,
 				9122B0301E6E98070024AE10 /* AppDelegate.swift in Sources */,
+				91C5D4361E844B2200DAFD11 /* CognitoIdentityPoolController.swift in Sources */,
 				9122B0761E7842510024AE10 /* CognitoUserPoolController.swift in Sources */,
 				9122B0461E6E986C0024AE10 /* HomeViewController.swift in Sources */,
 			);
@@ -350,11 +372,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/FacebookSDKs-iOS-4.20.2",
 				);
 				INFOPLIST_FILE = AWSChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asmtechnology.AWSChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/AWSChat/ObjCBridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -366,11 +391,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/FacebookSDKs-iOS-4.20.2",
 				);
 				INFOPLIST_FILE = AWSChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asmtechnology.AWSChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/AWSChat/ObjCBridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
